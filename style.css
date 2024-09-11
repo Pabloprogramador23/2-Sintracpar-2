@@ -173,89 +173,118 @@ nav li:hover .submenu {
 
 /*  ========================= Toques Artísticos ===========================  */  
 
-/* Ícones (Font Awesome) */
-.beneficios i, .noticias i, .contato i  { 
-    font-size: 2em;  
-    margin-bottom: 10px; 
-    color: var(--cor-detalhe); /* Verde escuro  */
-}
-.lista-beneficios { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsivo! */ 
-    grid-gap: 30px;
-}
-
-.beneficio {
-    background-color: white; /* Fundo branco para contraste */ 
-    border-radius: 8px; 
-    padding: 20px; 
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);  /* Sombra sutil */ 
-    transition: transform 0.3s ease; /*  Efeito suave ao passar o mouse */
-} 
-
-.beneficio:hover {
-    transform: translateY(-5px);  /*  Pequena elevação ao passar o mouse */ 
-}
-
-.beneficio h3 { 
-    color: var(--cor-destaque);  /*  Amarelo para destaque */ 
-    margin-bottom: 10px; 
-}
-
-.beneficio p {
-    color: var(--cor-secundaria);  
-    line-height: 1.5; 
-}
-.lista-noticias {
+/* ================ Cards de Benefícios ================= */ 
+.cards-section {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    grid-template-columns: repeat(3, 1fr); /* Três colunas */
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: white;
+    transition: transform 0.3s ease;
+    max-height: 300px; /* Altura mínima aumentada */
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Estilos dos ícones */
+.icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* Título dos cartões */
+.card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* Texto dentro dos cartões */
+.card p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Efeito hover */
+.card:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+/* Ajuste de responsividade */
+@media screen and (max-width: 768px) {
+    .cards-section {
+        grid-template-columns: repeat(2, 1fr); /* Duas colunas em telas menores */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cards-section {
+        grid-template-columns: 1fr; /* Uma coluna em telas muito pequenas */
+    }
+}
+/* =================  Cards de Notícias ===================  */
+/* =================  Cards de Notícias ===================  */
+.lista-noticias { 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 30px;
 }
 
 .noticia {
-    background-color: white;
+    background-color: white; 
     border-radius: 8px;
-    overflow: hidden; /*  Para o efeito da imagem no hover  */  
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);  
-    transition: transform 0.3s ease; 
-} 
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
 
 .noticia:hover {
-    transform: translateY(-5px); 
-} 
+    transform: translateY(-8px); 
+}
 
-.noticia img {
+.noticia img { 
     width: 100%;
     height: 200px; 
     object-fit: cover;  
 }
 
 .noticia .conteudo { 
-    padding: 20px;
+    padding: 20px; 
 }
 
-.noticia h3 {
+.noticia h3 { 
     color: var(--cor-texto-principal);  
     margin-bottom: 10px;
-} 
+    font-size: 1.5em; 
+    font-weight: bold;
+}
 
-.noticia p {
+.noticia p { 
     color: var(--cor-secundaria); 
     line-height: 1.5;
     margin-bottom: 15px;
 }
 
-.noticia .ler-mais {
-    display: inline-block;  
-    padding: 8px 15px;
-    background-color: var(--cor-destaque);  
-    color: var(--cor-secundaria);  
-    text-decoration: none;  
-    border-radius: 4px;
+.noticia .ler-mais { 
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--cor-destaque); 
+    color: var(--cor-secundaria);
+    text-decoration: none;
+    border-radius: 4px; 
     transition: background-color 0.3s ease; 
 } 
 
 .noticia .ler-mais:hover {
-    background-color: var(--cor-detalhe); 
-    color: white; 
+    background-color: var(--cor-detalhe);
+    color: white;  
 }
