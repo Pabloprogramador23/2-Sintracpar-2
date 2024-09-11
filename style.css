@@ -1,226 +1,261 @@
 /* Importação da fonte Roboto (Google Fonts) */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); 
 
 /* Reset de estilos para garantir uniformidade entre navegadores */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+  margin: auto;
+  padding: 0;
+  box-sizing: border-box;
+} 
+
+/* Paleta de Cores - Sintonia Vibrante */
+:root {
+  --cor-fundo: #DAE0E6;   
+  --cor-texto-principal: #033603;
+  --cor-destaque: #FFC107; 
+  --cor-secundaria: #293845;  
+  --cor-detalhe: #006400;  
+} 
 
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #e0f2f7;
-    color: #263238;
-    line-height: 1.6;
-    }
-    /* Container Principal - controla a largura máxima do conteúdo */
-    .container {
-    max-width: 1200px; /* Largura máxima do site */
-    margin:0 auto; 
-    padding: 20px;
-    }
-
-    header {
-        padding: 40px;
-        background-color: #006600; /* Verde escuro do Sindicato */
-        color: #fff; /* Texto branco no header */ 
-        display: flex; /* Usando Flexbox para organizar os elementos */
-        align-items: center;  /* Alinha os elementos verticalmente ao centro */
-    }
-    
-    .container-header {
-        display: flex; 
-        align-items: center;
-        width: 100%; 
-        justify-content: center; /* Centraliza horizontalmente */
-        flex-direction: column;
-      }
-    header h1 {
-        margin: 0;
-        font-size: 40px; 
-        margin-left: 40px;
-        align-items: center;
-    }
-    
-    header h2 {
-        margin: 0; /* Removendo margem padrão */
-        font-size: 30px;
-        margin-left: 60px;
-        align-items: center;
-    }
-
-header, main, footer {
-    padding: 20px;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--cor-fundo); 
+  color: var(--cor-texto-principal); 
+  line-height: 1.6;
 }
 
-/* Estilos para a seção de destaque */
-destaque {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    margin-bottom: 40px;
-    text-align: center;
-    }
+/* Container principal - controla a largura máxima do conteúdo */
+.container {
+  max-width: 1200px;
+  margin: 0 auto; 
+  padding: 20px; 
+} 
 
-    .destaque h2 {
-    color: #006600;
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    }
+/* Header */
+header {
+    background-color: var(--cor-destaque);
+    color: var(--cor-secundaria); 
+    padding: 20px 0; 
+    text-align: center; 
+} 
 
-    .destaque .verificado {
-    display: inline-block;
-    padding: 5px 10px;
-    background-color: #FFFFE0; /* Amarelo claro */
-    color: #006600;
-    border-radius: 4px;
-    font-weight: bold;
-    margin-bottom: 15px;
-    }
+.header-content { 
+  display: flex;
+  flex-direction: column;  /* Logo e texto na vertical */
+  align-items: center; 
+}
 
-/* Estilos para as notícias */
-.noticias {
+.logo {
+    display: block;  
+    margin: 0 auto 20px auto; 
+    max-width:300px; 
+}
+
+h1, h2 {
+  margin: 0; /* Removendo margem padrão */ 
+}
+
+/* Estilos do Menu (Nav) */ 
+nav {
+  background-color: transparent; 
+} 
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;  
+}
+
+nav li {
+  margin-right: 40px;
+  position: relative;  
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--cor-secundaria);  
+  font-weight: bold;
+  transition: all 0.3s ease; 
+} 
+
+nav a:hover {
+  background-color: var(--cor-destaque);   
+  color: var(--cor-secundaria); 
+}
+
+.seta {  
+  font-size: 14px; 
+} 
+
+/* Submenu (Dropdown) */
+.submenu {
+  display: none; 
+  position: absolute;
+  top: 100%;  
+  left: 0;  
+  background-color: var(--cor-fundo); 
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);  
+  z-index: 1000; 
+} 
+
+.submenu li {
+  margin: 0; 
+  padding: 10px 20px; 
+}
+
+.submenu li:hover {
+    background-color: var(--cor-destaque); /* Destaque suave ao passar o mouse */
+} 
+
+nav li:hover .submenu { 
+  display: block; 
+}
+
+/*  ==================  Seção de Destaque (Carrossel)  ===================== */ 
+.destaque { 
+    position: relative; 
+    overflow: hidden;  
+}
+
+.carrossel {
+    display: flex;
+    transition: transform 0.5s ease-in-out; 
+}
+
+.carrossel img { 
+    width: 100%;  
+    height: 400px; 
+    object-fit: cover; 
+} 
+
+/*  Navegação do Carrossel (botões) */
+.seta-carrossel {
+    position: absolute; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    background-color: rgba(0, 0, 0, 0.3); 
+    color: #fff;
+    padding: 10px 15px; 
+    border: none;
+    cursor: pointer; 
+}
+
+.seta-carrossel:hover { 
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.seta-esquerda { 
+    left: 20px;
+} 
+
+.seta-direita { 
+    right: 20px; 
+} 
+
+/*  ========================  Demais Seções  ============================ */ 
+
+.sobre, .beneficios, .noticias { 
+    padding: 40px 0; 
+    text-align: center; 
+} 
+
+.sobre h2, .beneficios h2, .noticias h2  {
+    color: var(--cor-texto-principal);  
+    margin-bottom: 20px;  
+    font-size: 2.5em; 
+}
+
+.sobre p {
+    color: var(--cor-secundaria); 
+    font-size: 1.2em;
+    line-height: 1.6; 
+} 
+
+/*  ========================= Toques Artísticos ===========================  */  
+
+/* Ícones (Font Awesome) */
+.beneficios i, .noticias i, .contato i  { 
+    font-size: 2em;  
+    margin-bottom: 10px; 
+    color: var(--cor-detalhe); /* Verde escuro  */
+}
+.lista-beneficios { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsivo! */ 
+    grid-gap: 30px;
+}
+
+.beneficio {
+    background-color: white; /* Fundo branco para contraste */ 
+    border-radius: 8px; 
+    padding: 20px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);  /* Sombra sutil */ 
+    transition: transform 0.3s ease; /*  Efeito suave ao passar o mouse */
+} 
+
+.beneficio:hover {
+    transform: translateY(-5px);  /*  Pequena elevação ao passar o mouse */ 
+}
+
+.beneficio h3 { 
+    color: var(--cor-destaque);  /*  Amarelo para destaque */ 
+    margin-bottom: 10px; 
+}
+
+.beneficio p {
+    color: var(--cor-secundaria);  
+    line-height: 1.5; 
+}
+.lista-noticias {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsivo */
-    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    grid-gap: 30px;
 }
 
-.noticias {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-grid-gap: 30px;
-padding: auto;
-}
 .noticia {
-background-color: #fff;
-border-radius: 8px;
-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
-overflow: hidden; /* Para o efeito suave com a imagem */
-transition: transform 0.3s ease; /* Efeito de hover - movimento suave */
-}
-.noticia:hover {
-transform: translateY(-5px); /* Move o card levemente para cima */
-}
-.noticia img {
-width: 100%;
-height: 200px; /* Altura fixa para as imagens /
-object-fit: cover; / Ajusta a imagem ao container */
-}
-.noticia .conteudo {
-padding: 20px;
-}
-.noticia h3 {
-color: #006600;
-margin-bottom: 10px;
-}
-.noticia p {
-margin-bottom: 15px;
-}
-.noticia a.ler-mais {
-display: inline-block;
-padding: 10px 20px;
-background-color: #006600;
-color: #fff;
-text-decoration: none;
-border-radius: 4px;
-transition: background-color 0.3s ease;
-}
-.noticia a.ler-mais:hover {
-background-color: #004d00;
-}
-
-/* Estilos para os banners laterais */
-.banners {
-    margin-top: 40px;
-    display: grid;  /* Ativamos o Grid Layout */
-    grid-template-columns: repeat(3, 1fr); /* 3 colunas com largura igual */
-    grid-gap: 20px;  /* Espaçamento entre os banners */
-}
-
-.banner {
-    background-color: #fff;
-    padding: 20px;
+    background-color: white;
     border-radius: 8px;
-    text-align: center;
-    margin-bottom: 20px; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+    overflow: hidden; /*  Para o efeito da imagem no hover  */  
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);  
     transition: transform 0.3s ease; 
+} 
+
+.noticia:hover {
+    transform: translateY(-5px); 
+} 
+
+.noticia img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover;  
 }
 
-.banner:hover {
-    transform: scale(1.05);  /* Aumenta o tamanho levemente */
+.noticia .conteudo { 
+    padding: 20px;
 }
 
-.banner img {
-    /* Estilos para a imagem do banner - você irá adicioná-las depois */
-    max-width: 100%;  /* Garante que a imagem não ultrapasse o container */
-    height: auto;
+.noticia h3 {
+    color: var(--cor-texto-principal);  
+    margin-bottom: 10px;
+} 
+
+.noticia p {
+    color: var(--cor-secundaria); 
+    line-height: 1.5;
+    margin-bottom: 15px;
 }
 
-.banner a {
-    display: block;
-    padding: 10px 20px;
-    background-color: #006600;
-    color: #FFFFE0;
-    text-decoration: none;
+.noticia .ler-mais {
+    display: inline-block;  
+    padding: 8px 15px;
+    background-color: var(--cor-destaque);  
+    color: var(--cor-secundaria);  
+    text-decoration: none;  
     border-radius: 4px;
     transition: background-color 0.3s ease; 
-}
+} 
 
-.banner a:hover {
-    background-color:  #004d00; 
+.noticia .ler-mais:hover {
+    background-color: var(--cor-detalhe); 
+    color: white; 
 }
-/* Estilos para a seção Mais Lidas */
-/* ... (seu código CSS anterior) ... */
-
-/* Seção Mais Lidas */
-.mais-lidas {
-    margin-top: 60px; 
-  }
-  
-  .mais-lidas h2 {
-    color: #006600; 
-    font-size: 2em;
-    margin-bottom: 20px;
-  }
-  
-  .mais-lidas ul {
-    list-style: none;  /* Remove os marcadores da lista */
-    padding: 0; 
-  }
-  
-  .mais-lidas li {
-    display: flex; 
-    align-items: center; 
-    padding: 15px 0;
-    border-bottom: 1px solid #E0E0E0; /* Linha suave como divisória */ 
-  }
-  
-  .mais-lidas img {
-    width: 80px; /* Largura da miniatura */
-    height: 60px; /* Altura da miniatura */
-    object-fit: cover; /* Ajusta a imagem ao tamanho definido */
-    border-radius: 4px; /* Cantos arredondados na imagem */
-    margin-right: 15px;
-  }
-  
-  .mais-lidas a {
-    text-decoration: none; 
-    color: #263238;  /* Cor do link - mesma do texto padrão */
-    transition: color 0.3s ease; 
-  }
-  
-  .mais-lidas a:hover {
-    color: #006600; 
-  }
-  
-  .mais-lidas .numero { 
-    font-weight: bold; 
-    margin-right: 10px;
-  }
-  
-  .mais-lidas .titulo { 
-    color: #FFFFE0; /* Amarelo claro para o título */ 
-    font-weight: 600; /* Título um pouco mais espesso */
-  }
