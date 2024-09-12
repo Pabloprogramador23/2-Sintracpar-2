@@ -272,3 +272,44 @@ nav li:hover .submenu {
     background-color: var(--cor-detalhe);
     color: white;  
 }
+
+/* =============== Seção ""Sobre" do Sindicato"  ================ */
+
+/*  =================  Seção "Sobre o Sindicato" - Estilo Card =================  */
+
+.sobre {
+    background-color: var(--cor-fundo);
+    padding: 40px 0; 
+}
+
+.card-sobre { 
+    background-color: var(--cor-secundaria); /*  Azul escuro para o card  */
+    color: white; /* Texto branco  */ 
+    border-radius: 8px;
+    display: flex; /* Usando flexbox para o layout do card */ 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /*  Sombra sutil */
+} 
+
+.conteudo-sobre {  
+    flex: 1;  /*  A  "conteudo-sobre"  ocupará o espaço disponível */ 
+    padding: 50px;  
+    text-align: left; /* Alinha o texto à esquerda  */ 
+} 
+
+.conteudo-sobre h2 { 
+    color: #FFC107;  /*  Título em amarelo vibrante  */
+    margin-bottom: 20px; 
+    font-size: 2em; 
+} 
+
+.conteudo-sobre p {
+    font-size: 1em;
+    line-height: 1.6; 
+    color: #FFC107;    
+} 
+
+.imagem-sobre {  
+    width: 300px;;  /* Largura da imagem */
+    background-color: var(--cor-detalhe);  /* Cor de fundo para a imagem */ 
+    /*  Você poderá usar background-image para inserir a imagem  */
+}
