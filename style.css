@@ -176,19 +176,23 @@ nav li:hover .submenu {
 /* =====================  Cards de Benefícios - Novo Estilo =================== */
 .lista-beneficios {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colunas */ 
+    grid-template-columns: repeat(4, 1fr); /* 3 colunas */ 
     gap: 20px;
-    padding: 20px; 
+    padding: 05px; 
 } 
 
 .beneficio {
     background-color: #fff; 
-    padding: 20px;
-    border-radius: 8px; 
+    padding: 100px;
+    border-radius: 30px; 
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center; 
     color: white;  
     transition: transform 0.3s ease;
+    height: 100px; /* Define uma altura fixa para os cards */  
+    display: flex;  /*  Flexbox para alinhar o conteúdo verticalmente  */  
+    flex-direction: column;  
+    justify-content: center;
 }
 
 .beneficio:hover { 
@@ -196,18 +200,18 @@ nav li:hover .submenu {
 }
 
 .icon {
-    font-size: 48px; 
+    font-size: 15px; 
     margin-bottom: 15px;
-    display: block; 
+    display:flex; 
 }
 
 .beneficio h3 { 
-    font-size: 22px; 
+    font-size: 15px; 
     margin-bottom: 10px; 
 } 
 
 .beneficio p { 
-    font-size: 16px; 
+    font-size: 10px; 
     line-height: 1.5; 
 }
 
