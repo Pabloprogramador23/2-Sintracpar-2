@@ -173,65 +173,45 @@ nav li:hover .submenu {
 
 /*  ========================= Toques Artísticos ===========================  */  
 
-/* ================ Cards de Benefícios ================= */ 
-.cards-section {
+/* =====================  Cards de Benefícios - Novo Estilo =================== */
+.lista-beneficios {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Três colunas */
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas */ 
     gap: 20px;
-    padding: 20px;
-}
+    padding: 20px; 
+} 
 
-.card {
-    background-color: #fff;
+.beneficio {
+    background-color: #fff; 
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 8px; 
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    color: white;
+    text-align: center; 
+    color: white;  
     transition: transform 0.3s ease;
-    max-height: 300px; /* Altura mínima aumentada */
-    display: grid;
-    flex-direction: column;
-    justify-content: center;
 }
 
-/* Estilos dos ícones */
+.beneficio:hover { 
+    transform: scale(1.05);  
+}
+
 .icon {
-    font-size: 48px;
+    font-size: 48px; 
     margin-bottom: 15px;
-    display: block;
+    display: block; 
 }
 
-/* Título dos cartões */
-.card h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
+.beneficio h3 { 
+    font-size: 22px; 
+    margin-bottom: 10px; 
+} 
+
+.beneficio p { 
+    font-size: 16px; 
+    line-height: 1.5; 
 }
 
-/* Texto dentro dos cartões */
-.card p {
-    font-size: 16px;
-    line-height: 1.5;
-}
 
-/* Efeito hover */
-.card:hover {
-    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
-}
-
-/* Ajuste de responsividade */
-@media screen and (max-width: 768px) {
-    .cards-section {
-        grid-template-columns: repeat(2, 1fr); /* Duas colunas em telas menores */
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .cards-section {
-        grid-template-columns: 1fr; /* Uma coluna em telas muito pequenas */
-    }
-}
-/* =================  Cards de Notícias ===================  */
 /* =================  Cards de Notícias ===================  */
 .lista-noticias { 
     display: grid;
