@@ -59,123 +59,84 @@ const formulario = document.getElementById('contatoForm');
 formulario.addEventListener('submit', enviarFormulario);
 
 
+//  ================  Função para carregar e exibir as notícias (com paginação)  ================ 
+function exibirNoticias(pagina = 1) {
+  const noticiasPorPagina = 6; // Número de notícias por página (ajuste se necessário)
 
-//============================================================================
+  const listaNoticias = document.querySelector('.lista-noticias'); 
+  listaNoticias.innerHTML = ''; //  Limpa as notícias anteriores
 
-function exibirNoticias() {
-    const listaNoticias = document.querySelector('.lista-noticias');
-    listaNoticias.innerHTML = ''; 
+  const xhr = new XMLHttpRequest();
+  xhr.open('GET', 'noticias.json', true); 
 
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET','noticias.json', true); //  Corrigido:  'noticias.json' (mesma pasta do HTML)
-  
-    xhr.onload = function() { 
-        if (this.status === 200) {
-          const noticias = JSON.parse(this.responseText);
-  
-          noticias.forEach(noticia => {
-            // Cria os elementos HTML (como no código anterior)
-            const divNoticia = document.createElement('div');
-            divNoticia.classList.add('noticia');
-  
-            divNoticia.innerHTML = `
-              <img src="${noticia.imagem}" alt="${noticia.titulo}">
-              <div class="conteudo">
-                <h3>${noticia.titulo}</h3>
-                <p>${noticia.resumo}</p>
-                <p class="data">${noticia.data}</p>
-                <a href="#" class="ler-mais">Ler Mais</a>
-              </div>
-            `;
-  
-            listaNoticias.appendChild(divNoticia); 
+  xhr.onload = function() {
+      if (this.status === 200) { 
+          const todasNoticias = JSON.parse(this.responseText);
+
+          // Calcula o índice inicial e final das notícias a serem exibidas
+          const indiceInicial = (pagina - 1) * noticiasPorPagina; 
+          const indiceFinal = indiceInicial + noticiasPorPagina;  
+          const noticiasPagina = todasNoticias.slice(indiceInicial, indiceFinal);
+
+          // Itera pelas notícias da página atual
+          noticiasPagina.forEach(noticia => {
+              // Cria o elemento da notícia
+              const divNoticia = document.createElement('div'); 
+              divNoticia.classList.add('noticia');
+
+              divNoticia.innerHTML = ` 
+                  <img src="${noticia.imagem}" alt="${noticia.titulo}">
+                  <div class="conteudo">
+                      <h3>${noticia.titulo}</h3>
+                      <p>${noticia.resumo}</p>
+                      <p class="data">${noticia.data}</p> 
+                      <a href="#" class="ler-mais">Ler Mais</a>  
+                  </div> 
+              `; 
+              listaNoticias.appendChild(divNoticia);  
           }); 
+
+          // ============== Paginação  ==============  
+          const paginacao = document.querySelector('.paginacao'); 
+          paginacao.innerHTML = ''; // Limpa os botões de paginação anteriores 
+
+          // Calcula o número total de páginas
+          const totalPaginas = Math.ceil(todasNoticias.length / noticiasPorPagina);
+
+          // Cria os botões de paginação
+          for (let i = 1; i <= totalPaginas; i++) {
+              const botao = document.createElement('button'); 
+              botao.classList.add('btn-pagina');
+              botao.textContent = i;
+              botao.dataset.pagina = i;  
+
+              //  Marca a página atual como "ativa"  
+              if (i === pagina) {
+                  botao.classList.add('ativo'); 
+              } 
+
+              botao.addEventListener('click', () => {  
+                  exibirNoticias(i); // Carrega a página correspondente 
+              });
+
+              paginacao.appendChild(botao); 
+          }
+
+      } else {
+          console.error("Erro ao carregar noticias.json"); 
+      }
+  };
+
+  xhr.onerror = function() { 
+      console.error("Erro na requisição AJAX"); 
+  };
+
+  xhr.send(); 
+}
+
+
+//  Carrega as notícias da primeira página ao carregar a página
+window.addEventListener('load', () => {  
+  exibirNoticias(1); // Página 1 por padrão  
+});
   
-        } else {
-          console.error("Erro ao carregar noticias.json. Código de status:", this.status); 
-          // Adicione uma mensagem amigável para o usuário na página, se desejar
-        }
-    } 
-  
-    xhr.onerror = function() { 
-        console.error("Erro na requisição AJAX para noticias.json.");
-        // Adicione uma mensagem amigável para o usuário na página, se desejar
-    };
-  
-    xhr.send();
-  } 
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//JSON simulado
-/**const noticias = [
-    {
-      imagem: "assets/imagens/woman-patient-dentist-minPNGG.png", 
-      titulo: "Primeira Notícia Incrível", 
-      resumo: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
-      data: "15 de Novembro de 2023"  
-    }, 
-    { 
-      imagem: "assets/imagens/trabalhadores.jpeg",
-      titulo: "Segunda Notícia Extraordinária", 
-      resumo:  "Praesent sed nisi ac mi bibendum laoreet.  ",
-      data: "10 de Novembro de 2023"
-    }, 
-    {
-      imagem:  "assets/imagens/advogado.jpeg",
-      titulo: "Terceira Notícia Sensacional!",
-      resumo:  "Pellentesque habitant morbi tristique senectus et netus", 
-      data: "05 de Novembro de 2023" 
-    }
-    // ... Adicione mais notícias aqui!
-  ];
-
-  //função exibir noticias
-  function exibirNoticias() {
-    const listaNoticias = document.querySelector('.lista-noticias');
-    listaNoticias.innerHTML = ''; 
-  
-    noticias.forEach(noticia => { 
-      const divNoticia = document.createElement('div'); 
-      divNoticia.classList.add('noticia'); 
-  
-      divNoticia.innerHTML = `
-          <img src="${noticia.imagem}" alt="${noticia.titulo}">
-          <div class="conteudo">  
-              <h3>${noticia.titulo}</h3> 
-              <p>${noticia.resumo}</p>
-              <p class="data">${noticia.data}</p>
-              <a href="#" class="ler-mais">Ler Mais</a>
-          </div>
-      `; 
-  
-      listaNoticias.appendChild(divNoticia); 
-    }); 
-  }
-  //carrega afunção quand a página é carregada
-  window.addEventListener('load', exibirNoticias); */
