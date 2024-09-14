@@ -336,3 +336,111 @@ nav li:hover .submenu {
   height: auto; 
   border-radius: 8px; 
 }
+
+/*  ====================== Seção de Contato  =======================  */  
+
+.contato {
+  padding: 40px 0; 
+  background-color: var(--cor-fundo); 
+}
+
+.contato-conteudo { 
+  display: flex; 
+  justify-content: space-between;  
+  align-items: center;  
+}
+
+.contato-info {  
+  width: 48%;
+  color: var(--cor-texto-principal);
+  text-align: left;
+}
+
+/*  ================  Formulário de Contato  ==================  */
+.contato-info form {
+  margin-top: 20px;
+  }
+  .form-group {
+  margin-bottom: 15px;
+  }
+  .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--cor-secundaria); /* Azul escuro */
+  }
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;  
+    border-radius: 4px;
+  }
+  .contato-info button[type="submit"] {
+    padding: 10px 20px;
+    background-color: var(--cor-destaque); /* Amarelo /
+    color: var(--cor-secundaria); / Azul escuro */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    }
+    .contato-info button[type="submit"]:hover {
+    background-color: var(--cor-detalhe); /* Verde escuro */
+    color: white;
+    }
+    .contato-info .info-contato {  
+      margin-top: 30px;
+   
+   }
+  /*  ================ =====================  ==================  */
+
+.contato-info h2 {
+  color: var(--cor-secundaria);  
+  margin-bottom: 20px;
+} 
+
+.contato-info h3 {
+  color: var(--cor-secundaria);
+  margin-bottom: 10px;
+} 
+
+.contato-info p {
+  margin-bottom: 10px; 
+}  
+
+.contato-info a {  /*  Estilo para o link do email  */  
+  color: var(--cor-secundaria);  
+  text-decoration: none;
+  font-weight: bold;  
+  transition: color 0.3s ease;  
+}
+
+.contato-info a:hover { 
+  color: var(--cor-destaque);  
+} 
+
+.contato-info .social-icons { 
+  margin-top: 20px;
+}  
+
+.contato-info .social-icons a { 
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 1.5em;
+  color: var(--cor-secundaria);  /*  Ícones amarelos */ 
+  transition: color 0.3s ease; 
+}
+
+.contato-info .social-icons a:hover {  
+  color: var(--cor-destaque); /* Ícones verdes ao passar o mouse  */
+}
+
+.contato-mapa { 
+  width: 48%;
+}
+
+.contato-mapa iframe { 
+  width: 100%; 
+  border: none; 
+  border-radius: 8px; 
+}
