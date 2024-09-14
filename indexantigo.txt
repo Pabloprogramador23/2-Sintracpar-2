@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sintracpar - Sindicato dos Trabalhadores do Comércio de Paragominas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container-header"> 
+            <h1>SINTRACPAR</h1>
+            <h2>Sindicato dos Trabalhadores do comércio do Pará</h2> 
+        </div>
+        <img src="\assets\imagens\logo.png" alt="Logo SINTRACPAR" class="logo"> 
+    </header>
+
+    <main>
+        <section class="destaque">
+            <img src="noticia-destaque.jpg" alt="Imagem da notícia de destaque">
+            <h2>Registrado Acordo Coletivo de Trabalho com a Empresa X</h2>
+        </section>
+
+        <section class="noticias">
+            <div id="noticias-container"> 
+                <!-- Notícias serão carregadas aqui via JavaScript -->
+            </div>
+        </section>
+
+        <aside class="banners">
+            <div class="banner">
+                <a href="#">Emitir Boleto Sindical</a> 
+            </div>
+            <div class="banner">
+                <a href="#">Convênios e Benefícios</a>
+            </div>
+            <div class="banner">
+                <a href="#">Fale Conosco</a>
+            </div>
+            <div class="banner">
+                <a href="#">Acesse Nossa Ouvidoria</a>
+            </div>
+            <div class="banner">
+                <a href="#">Área do Associado</a>
+            </div>
+            <div class="banner">
+                <a href="#">Redes Sociais</a>
+            </div>
+        </aside>
+
+        <<section class="mais-lidas">
+            <h2>Mais Lidas</h2> 
+            <ul>
+              <li>
+                <a href="#">
+                  <img src="caminho/da/imagem1.jpg" alt="Descrição da Imagem 1">
+                  <span class="numero">1.</span> <span class="titulo">Título da Notícia 1</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="caminho/da/imagem2.jpg" alt="Descrição da Imagem 2">
+                  <span class="numero">2.</span> <span class="titulo">Título da Notícia 2</span>
+                </a>
+              </li>
+              <li>
+                <a href="#"> 
+                  <img src="caminho/da/imagem3.jpg" alt="Descrição da Imagem 3">
+                  <span class="numero">3.</span> <span class="titulo">Título da Notícia 3</span>
+                </a>
+              </li>
+              </ul>
+          </section>
+    </main>
+
+    <footer>
+        <p>© 2023 Sintracpar. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

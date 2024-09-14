@@ -1,0 +1,22 @@
+[
+  {
+    "imagem": "assets/imagens/woman-patient-dentist-minPNGG.png",
+    "titulo": "Sintracpar conquista novo convênio odontológico para comerciários!",
+    "resumo": "O Sintracpar firmou parceria com a clínica XYZ, oferecendo aos associados descontos exclusivos em diversos tratamentos.",
+    "data": "15 de Novembro de 2023"
+  },
+  {
+    "imagem": "assets/imagens/trabalhadores.jpeg",
+    "titulo": "Assembleia debate reajuste salarial da categoria",
+    "resumo": "Comerciários de Paragominas se reuniram em assembleia para discutir a proposta de reajuste salarial para 2024.",
+    "data": "10 de Novembro de 2023"
+  },
+  {
+    "imagem": "assets/imagens/advogado.jpeg",
+    "titulo": "Sintracpar oferece assessoria jurídica gratuita aos trabalhadores",
+    "resumo": "Saiba como o departamento jurídico do sindicato pode auxiliar em questões trabalhistas, como férias, rescisões e direitos.",
+    "data": "05 de Novembro de 2023"
+  } 
+  // ... adicione mais notícias! 
+]
+  

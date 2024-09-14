@@ -5,76 +5,144 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sintracpar - Sindicato dos Trabalhadores do Comércio de Paragominas</title>
     <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> </head>
 <body>
+
     <header>
-        <div class="container-header"> 
-            <img src="\assets\imagens\logo.png" alt="Logo Sintracpar" width="200"> 
-            <h1>SINTRACPAR</h1>
-            <h2>Sindicato dos Trabalhadores do comércio do Pará</h2> 
-         </div>       
+        <div class="container"> 
+            <div class="header-content">
+                <img src="\assets\imagens\logonotBG.png" alt="Logo SINTRACPAR" class="logo"> 
+                <h1>SINTRACPAR</h1> 
+                <h2>Sindicato dos Trabalhadores do comércio do Pará</h2>
+            </div>
+        </div>
+         <nav>
+            <div class="container">
+              <ul>
+                <li><a href="#">Início</a></li>
+                <li>
+                  <a href="#">O Sindicato <span class="seta">▼</span></a> 
+                  <ul class="submenu">
+                    <li><a href="#historia">História</a></li>
+                    <li><a href="#missao">Missão e Valores</a></li>
+                    <li><a href="#diretoria">Diretoria</a></li> 
+                    <!-- Adicione mais itens, se necessário -->
+                  </ul>
+                </li>
+                <li><a href="#">Notícias</a></li>
+                <li><a href="#">Documentos e Legislação</a></li>
+                <li><a href="#">Contato</a></li>
+              </ul>
+            </div>
+        </nav> 
     </header>
 
     <main>
         <section class="destaque">
-            <img src="noticia-destaque.jpg" alt="Imagem da notícia de destaque">
-            <h2>Registrado Acordo Coletivo de Trabalho com a Empresa X</h2>
+            <div class="container"> 
+                <div class="carrossel"> 
+                    <img src="assets\imagens\woman-patient-dentist.jpg" alt="Imagem do Carrossel 1">
+                    <img src="assets\imagens\advogado.jpeg" alt="Imagem do Carrossel 2"> 
+                    <img src="assets\imagens\trabalhadores.jpeg" alt="Imagem do Carrossel 3"> 
+                </div>
+                <button class="seta-carrossel seta-esquerda"> < </button> 
+                <button class="seta-carrossel seta-direita"> > </button> 
+            </div> 
+        </section> 
+
+        <section class="sobre">
+            <div class="container"> 
+                <div class="card-sobre">  
+                    <div class="conteudo-sobre">  
+                        <h2>Sobre o Sindicato</h2>
+                        <p>
+                            O Sindicato dos Trabalhadores no Comércio de Paragominas
+                            (SINTRACPAR) luta incansavelmente pelos direitos e melhores
+                            condições de trabalho dos comerciários de nossa cidade. Através
+                            de negociações coletivas, garantimos que seus direitos sejam
+                            respeitados e ampliados. Nosso site oferece serviços como
+                            apoio jurídico, agendamento de homologações, acesso a
+                            boletos e declarações, além de informações sobre acordos e
+                            convenções. Junte-se a nós e faça parte da luta por um
+                            comércio mais justo e digno em Paragominas!
+                        </p> 
+                    </div> 
+                    <div class="imagem-sobre">
+                        <img src="assets/imagens/comercio-paragominas.jpg" alt="Imagem representando o comércio de Paragominas"> 
+                    </div> 
+                </div> 
+            </div>
         </section>
 
-        <section class="noticias">
-            <div class="noticia">
-                <img src="noticia1.jpg" alt="Imagem da notícia 1">
-                <h3>Sintracpar em Ação: Garantindo Direitos</h3>
-            </div>
-            <div class="noticia">
-                <img src="noticia2.jpg" alt="Imagem da notícia 2">
-                <h3>Negociações Coletivas: Conquistas para a Categoria</h3>
-            </div>
-            <div class="noticia">
-                <img src="noticia3.jpg" alt="Imagem da notícia 3">
-                <h3>Fortalecimento Sindical: Juntos Somos Mais Fortes</h3>
-            </div>
-            <div class="noticia">
-                <img src="noticia4.jpg" alt="Imagem da notícia 4">
-                <h3>Participe da Assembleia: Sua Voz Faz a Diferença</h3>
-            </div>
-        </section>
-
-        <aside class="banners">
-            <div class="banner">
-                <a href="#">Emitir Boleto Sindical</a> 
-            </div>
-            <div class="banner">
-                <a href="#">Convênios e Benefícios</a>
-            </div>
-            <div class="banner">
-                <a href="#">Fale Conosco</a>
-            </div>
-            <div class="banner">
-                <a href="#">Acesse Nossa Ouvidoria</a>
-            </div>
-            <div class="banner">
-                <a href="#">Área do Associado</a>
-            </div>
-            <div class="banner">
-                <a href="#">Redes Sociais</a>
-            </div>
-        </aside>
-
-        <section class="mais-lidas">
-            <h2>Mais Lidas</h2>
-            <ul>
-                <li><a href="#">Notícia Mais Lida 1</a></li>
-                <li><a href="#">Outra Notícia Muito Acessada</a></li>
-                <li><a href="#">Fique por Dentro desta Informação</a></li>
-                <li><a href="#">Importante Notícia do Sintracpar</a></li>
-                <li><a href="#">Acompanhe as Novidades do Sindicato</a></li>
-            </ul>
-        </section>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Seções com Cartões</title>
+            <link rel="stylesheet" href="style.css">
+        </head>
+        <body>
+            <section class="beneficios">
+                <div class="container">
+                    <h2>Benefícios para o Trabalhador</h2>
+                    <div class="lista-beneficios">  
+                        <div class="beneficio" style="background-color: #f4456b;">
+                            <i class="icon">⚔</i>
+                            <h3>Jurídico</h3>
+                            <p>Saiba mais sobre o atendimento jurídico que o Sintracpar oferece.</p> 
+                        </div>
+                        <div class="beneficio" style="background-color: #ff5733;">
+                            <i class="icon">⚒</i> 
+                            <h3>Saúde</h3>
+                            <p>Conheça nossos atendimentos de saúde.</p>  
+                        </div>
+                        <div class="beneficio" style="background-color: #f39c12;">
+                            <i class="icon"></i>
+                            <h3>Acordos e Convenções</h3>
+                            <p>Acesse a relação dos acordos, convenções e dissídios.</p> 
+                        </div>
+                        <div class="beneficio" style="background-color: #16a085;">
+                            <i class="icon">⚖</i>
+                            <h3>Homologações</h3>
+                            <p>Agende o atendimento para homologações.</p> 
+                        </div>
+                        <div class="beneficio" style="background-color: #2c3e50;">
+                            <i class="icon"></i> 
+                            <h3>Boleto de Sócios</h3>
+                            <p>Acesse e emita seus boletos.</p> 
+                        </div>
+                        <div class="beneficio" style="background-color: #2ecc71;">
+                            <i class="icon"></i> 
+                            <h3>Declarações</h3>
+                            <p>Solicite declarações para os mais variados fins.</p>  
+                        </div>
+                        <div class="beneficio" style="background-color: #f39c12;">
+                            <i class="icon"></i>
+                            <h3>Acordos e Convenções</h3>
+                            <p>Acesse a relação dos acordos, convenções e dissídios.</p> 
+                        </div>
+                        <div class="beneficio" style="background-color: #f39c12;">
+                            <i class="icon"></i>
+                            <h3>Acordos e Convenções</h3>
+                            <p>Acesse a relação dos acordos, convenções e dissídios.</p> 
+                        </div>
+                    </div> 
+                </div>
+            </section>
+            <section class="noticias">
+                <div class="container"> 
+                    <h2>Últimas Notícias</h2>
+                    <div class="lista-noticias">
+                    </div> 
+                </div>
+            </section>
     </main>
 
     <footer>
-        <p>© 2023 Sintracpar. Todos os direitos reservados.</p>
+        <div class="container">
+            <p>© 2023 Sintracpar. Todos os direitos reservados.</p>
+        </div>
     </footer>
-</body>
+
+    <script src="script.js"></script> 
+</body> 
 </html>
