@@ -1,3 +1,6 @@
+
+
+window.addEventListener('load', exibirNoticias);
 // Carrossel
 const carrossel = document.querySelector('.carrossel');
 const setaEsquerda = document.querySelector('.seta-esquerda');
@@ -28,13 +31,12 @@ function atualizarPosicaoCarrossel() {
 } 
 
 
-function exibirNoticias() { 
+function exibirNoticias() {
     const listaNoticias = document.querySelector('.lista-noticias');
-    listaNoticias.innerHTML = ''; // Limpa o conteúdo anterior
-  
-    // Faz a requisição AJAX para o arquivo noticias.json 
-    const xhr = new XMLHttpRequest(); 
-    xhr.open('GET', 'noticias.json', true);  // Substitua 'noticias.json' pelo caminho correto, se necessário
+    listaNoticias.innerHTML = ''; 
+
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET','noticias.json', true); //  Corrigido:  'noticias.json' (mesma pasta do HTML)
   
     xhr.onload = function() { 
         if (this.status === 200) {
@@ -72,8 +74,6 @@ function exibirNoticias() {
     xhr.send();
   } 
   
-  // Chamada da função ao carregar a página (como antes)
-  window.addEventListener('load', exibirNoticias); 
 
 
 
