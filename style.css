@@ -39,78 +39,85 @@ header {
     text-align: center; 
 } 
 
-.header-content { 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header-content {
   display: flex;
-  flex-direction: column;  /* Logo e texto na vertical */
-  align-items: center; 
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.social-icon {
+  color: #333;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.btn-login {
+  background-color: var(--cor-secundaria);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
 }
 
 .logo {
-    display: block;  
-    margin: 0 auto 20px auto; 
-    max-width:300px; 
+  max-width: 400px;
+  margin-right: 10px;
 }
 
 h1, h2 {
-  margin: 0; /* Removendo margem padrão */ 
+  margin: 0;
 }
 
-/* Estilos do Menu (Nav) */ 
 nav {
-  background-color: transparent; 
-} 
+  background-color: #333;
+  color: #fff;
+}
 
 nav ul {
-  list-style: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
   display: flex;
-  justify-content: center;  
 }
 
 nav li {
-  margin-right: 40px;
-  position: relative;  
+  position: relative;
 }
 
-nav a {
+nav li a {
+  display: block;
+  color: #fff;
   text-decoration: none;
-  color: var(--cor-secundaria);  
-  font-weight: bold;
-  transition: all 0.3s ease; 
-} 
-
-nav a:hover {
-  background-color: var(--cor-destaque);   
-  color: var(--cor-secundaria); 
+  padding: 10px 20px;
 }
 
-.seta {  
-  font-size: 14px; 
-} 
+nav li:hover > .submenu {
+  display: block;
+}
 
-/* Submenu (Dropdown) */
 .submenu {
-  display: none; 
+  display: none;
   position: absolute;
-  top: 100%;  
-  left: 0;  
-  background-color: var(--cor-fundo); 
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);  
-  z-index: 1000; 
-} 
-
-.submenu li {
-  margin: 0; 
-  padding: 10px 20px; 
+  background-color: #333;
+  width: 200px;
+  z-index: 1;
 }
 
-.submenu li:hover {
-    background-color: var(--cor-destaque); /* Destaque suave ao passar o mouse */
-} 
-
-nav li:hover .submenu { 
-  display: block; 
+.submenu li a {
+  padding: 10px;
 }
-
 /*  ==================  Seção de Destaque (Carrossel)  ===================== */ 
 .destaque { 
     position: relative; 
