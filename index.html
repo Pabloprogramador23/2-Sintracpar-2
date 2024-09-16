@@ -7,37 +7,49 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> </head>
 <body>
-
     <header>
-        <div class="container"> 
-            <div class="header-content">
-                <img src="\assets\imagens\logonotBG.png" alt="Logo SINTRACPAR" class="logo"> 
-                <h1>SINTRACPAR</h1> 
-                <h2>Sindicato dos Trabalhadores do comércio do Pará</h2>
+        <div class="container">
+          <div class="header-content">
+            <div class="social-icons">
+              <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
             </div>
+            <a href="#" class="btn-login">Área do Associado</a>
+          </div>
         </div>
-         <nav>
-            <div class="container">
-              <ul>
-                <li><a href="#">Início</a></li>
-                <li>
-                  <a href="#">O Sindicato <span class="seta">▼</span></a> 
-                  <ul class="submenu">
-                    <li><a href="#historia">História</a></li>
-                    <li><a href="#missao">Missão e Valores</a></li>
-                    <li><a href="#diretoria">Diretoria</a></li> 
-                    <!-- Adicione mais itens, se necessário -->
-                  </ul>
-                </li>
-                <li><a href="#">Notícias</a></li>
-                <li><a href="#">Documentos e Legislação</a></li>
-                <li><a href="#">Contato</a></li>
-              </ul>
+        <div class="container">
+          <div class="header-content">
+            <img src="\assets\imagens\logonotBG.png" alt="Logo SINTRACPAR" class="logo">
+            <div>
+              <h1>SINTRACPAR</h1>
+              <h2>Sindicato dos Trabalhadores do comércio do Pará</h2>
             </div>
-        </nav> 
-    </header>
+          </div>
+        </div>
+        <nav>
+          <div class="container">
+            <ul>
+              <li><a href="index.html">Início</a></li>
+              <li>
+                <a href="#">O Sindicato <span class="seta">▼</span></a>
+                <ul class="submenu">
+                  <li><a href="#historia">História</a></li>
+                  <li><a href="#missao">Missão e Valores</a></li>
+                  <li><a href="#diretoria">Diretoria</a></li>
+                </ul>
+              </li>
+              <li><a href="noticias.html">Notícias</a></li>
+              <li><a href="documentos.html">Documentos e Legislação</a></li>
+              <li><a href="#">Contato</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
 
     <main>
+        
         <section class="destaque">
             <div class="container"> 
                 <div class="carrossel"> 
@@ -74,13 +86,7 @@
             </div>
         </section>
 
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Seções com Cartões</title>
-            <link rel="stylesheet" href="style.css">
-        </head>
-        <body>
+           <body>
             <section class="beneficios">
                 <div class="container">
                     <h2>Benefícios para o Trabalhador</h2>
@@ -128,21 +134,116 @@
                     </div> 
                 </div>
             </section>
-            <section class="noticias">
-                <div class="container"> 
-                    <h2>Últimas Notícias</h2>
+            <section class="noticias-section"> 
+                <div class="container">  
+                    <h2>Notícias</h2>
                     <div class="lista-noticias">
+                        <!--  Os cards de notícias serão carregados aqui via JavaScript  --> 
+                    </div>  
+                    <!--  (Opcional)  -  Botões de Paginação -->  
+                    <div class="paginacao"> </div> 
+                </div>  
+            </section>
+            <section class="contato"> 
+                <div class="container"> 
+                    <div class="contato-conteudo">
+                        <div class="contato-info">
+                            <h2>Entre em Contato</h2> 
+                            <p> O Sintracpar está pronto para te atender! </p>
+                                                       
+                                <!-- Formulário de Contato -->  
+                                <form id="contatoForm">  
+                                    <div class="form-group">  
+                                        <label for="nome">Seu Nome:</label>  
+                                        <input type="text" id="nome" name="nome" required>
+                                    </div>
+                              
+                                    <div class="form-group">  
+                                        <label for="email">Seu Email:</label>  
+                                        <input type="email" id="email" name="email" required>  
+                                    </div> 
+                              
+                                    <div class="form-group">
+                                        <label for="mensagem">Sua Mensagem:</label>
+                                        <textarea id="mensagem" name="mensagem" rows="5" required></textarea> 
+                                    </div> 
+                              
+                                    <button type="submit">Enviar</button> 
+                                </form>
+                            <div class="endereco">  
+                                <h3>Endereço:</h3> 
+                                <p> R. Costa e Silva, 285 - Centro, Paragominas - PA, 68625-040 </p> 
+                            </div> 
+            
+                            <div class="contato-email"> 
+                                <h3>Email:</h3>
+                                <p> <a href="mailto:contato@sintracpra.com.br">contato@sintracpra.com.br</a> </p>  
+                            </div> 
+            
+                            <div class="contato-telefone"> 
+                                <h3>Telefone:</h3> 
+                                <p>(91) 1234-5678 </p>
+                            </div>
+            
+                            <div class="social-icons">
+                                <a href="#">
+                                    <i class="fab fa-facebook-f"></i> </a> 
+                                <a href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a> 
+                                <a href="#"> 
+                                    <i class="fab fa-instagram"></i> 
+                                </a>
+                                <!-- Adicione mais ícones sociais, se necessário -->
+                            </div>
+            
+                        </div>  
+            
+                        <div class="contato-mapa"> 
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2817.3805558643076!2d-47.35284201009904!3d-2.992477907021173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92b75df4eab2a283%3A0x34c3b08f79d76131!2sSintracpar!5e0!3m2!1spt-BR!2sbr!4v1726310781823!5m2!1spt-BR!2sbr" 
+                            width="600" 
+                            height="450" 
+                            style= "border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+            
                     </div> 
                 </div>
-            </section>
+            </section> 
     </main>
 
     <footer>
-        <div class="container">
-            <p>© 2023 Sintracpar. Todos os direitos reservados.</p>
+        <div class="footer-superior">
+            <div class="container"> 
+                <div class="footer-logos">
+                    <img src="assets/imagens/logonotBG.png" alt="Logo do Sindicato"> 
+                    <!-- Se tiver outras logos (UGT, etc.), adicione aqui -->  
+                </div>
+                <div class="footer-contato">
+                    <p>SINDICATO DOS TRABALHADORES DO COMERCIO DO PARÁ</p>
+                    <p> R. Costa e Silva, 285 - Centro, Paragominas - PA, 68625-040 </p> 
+                    <p> Tel.: (91) 1234-5678</p> 
+                </div>
+                <div class="social-icons-footer">
+                    <a href="#" target="_blank"> <i class="fab fa-instagram"></i> </a>
+                    <a href="#" target="_blank"> <i class="fab fa-facebook-f"></i> </a>
+                    <a href="#" target="_blank"> <i class="fab fa-twitter"></i> </a>
+                    <a href="#" target="_blank"> <i class="far fa-envelope"></i> </a>
+                </div>
+            </div> 
+        </div>
+    
+        <div class="footer-inferior">
+            <div class="container">
+                <p class="copyright"> © 2023 Sintracpar - Todos os Direitos Reservados </p> 
+            </div> 
         </div>
     </footer>
-
+    <a href="https://wa.me/SEUNUMEROTELEFONE" target="_blank" class="whatsapp-icon">  
+        <i class="fab fa-whatsapp"></i>  
+    </a>
     <script src="script.js"></script> 
 </body> 
 </html>
