@@ -562,3 +562,137 @@ nav li:hover > .submenu {
   background-color: var(--cor-secundaria); 
   color: rgb(19, 233, 169);
 }
+.login { 
+  padding: 60px 0; 
+  background-color: var(--cor-fundo);  
+  text-align: center;  
+}  
+
+.login h2 {  
+color: var(--cor-texto-principal); 
+margin-bottom: 20px;
+}  
+
+.login p {
+  color: var(--cor-secundaria);  
+  margin-bottom: 30px;
+} 
+
+.login form {  
+  max-width: 400px;  
+  margin: 0 auto; 
+  background-color: white; 
+  padding: 30px;  
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.1); 
+}
+
+.login .form-group {
+  margin-bottom: 15px;
+} 
+
+.login label { 
+  display: block;  
+  text-align: left; 
+  margin-bottom: 5px;
+  color: var(--cor-secundaria); 
+} 
+
+.login input[type="text"],
+.login input[type="password"] {
+  width: 100%;  
+  padding: 10px; 
+  border: 1px solid #ddd;  
+  border-radius: 4px; 
+}
+
+.login button[type="submit"] { 
+  width: 100%; 
+  padding: 12px;  
+  background-color: var(--cor-destaque); 
+  color: var(--cor-secundaria);  
+  border: none; 
+  border-radius: 4px;  
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+}
+
+.login button[type="submit"]:hover {
+background-color: var(--cor-detalhe); 
+color: white;
+}
+
+/* ===============  Rodapé - Organização e Detalhes! ===============  */
+
+footer { 
+  font-size: 14px;
+}
+
+.footer-superior {  
+  background-color: var(--cor-detalhe);  /* Verde */ 
+  padding: 20px 0;
+  color: white;
+} 
+
+.footer-inferior { 
+  background-color: var(--cor-destaque);  /* Amarelo */  
+  padding: 10px 0;  
+  color: var(--cor-detalhe);   /* Verde  */ 
+} 
+
+.footer-conteudo { 
+  display: flex;
+  align-items: center;  
+  justify-content: space-between;   /*  Distribui os elementos com espaço entre eles  */
+}
+
+/* === Logos  ===  */ 
+.footer-logos {  
+  text-align: right;  /* Alinha as logos à direita */  
+}
+
+.footer-logos img { 
+  max-width: 100px;   /* Define o tamanho máximo da logo */
+  height: auto;    /*  Mantém a proporção da imagem  */
+}  
+
+/* ===  Informações de Contato  === */  
+.footer-contato {
+  text-align: left;  
+} 
+
+.footer-contato p {
+  margin-bottom: 5px; 
+} 
+
+/* ===  Redes Sociais  === */ 
+.social-icons-footer a {
+  display: inline-block; 
+  margin: 0 10px; 
+  font-size: 1.4em;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.social-icons-footer a:hover {
+  color: var(--cor-destaque); 
+} 
+
+/* ============  Ícone Flutuante do WhatsApp  ============ */ 
+.whatsapp-icon {
+  position: fixed;  
+  bottom: 20px;   
+  right: 20px;   
+  background-color: #25d366;   /*  Verde do WhatsApp */ 
+  color: white;
+  padding: 15px;
+  border-radius: 50%; /*  Círculo Perfeito! */  
+  font-size: 2em; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);  
+  z-index: 1000;  
+  transition: background-color 0.3s ease; 
+}  
+
+.whatsapp-icon:hover { 
+  background-color: #128C7E;  
+}
