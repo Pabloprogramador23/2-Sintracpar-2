@@ -1,0 +1,43 @@
+/* =============== Seção ""Sobre" do Sindicato"  ================ */  
+/*  ================= Seção "Sobre o Sindicato" - Estilo Card ================= */  
+
+.sobre {
+    background-color: var(--cor-fundo);
+    padding: 40px 0;
+}  
+
+.card-sobre { 
+    display: flex;  
+    justify-content: space-between;  
+    align-items: center; 
+    background-color: transparent;
+    box-shadow: none; 
+}
+
+.conteudo-sobre {  
+  width: 50%; 
+  padding: 20px;  
+  text-align: left; 
+} 
+
+.conteudo-sobre h2 { 
+    color: var(--cor-texto-principal); /* Verde escuro */
+    font-size: 2em;
+    margin-bottom: 20px; 
+}
+
+.conteudo-sobre p { 
+  font-size: 1.1em; 
+  line-height: 1.6; 
+  color: var(--cor-secundaria); /* Azul escuro */
+}  
+
+.imagem-sobre {  
+  width: 45%;
+}
+
+.imagem-sobre img { 
+    width: 100%;
+    height: auto; 
+    border-radius: 8px;
+}
