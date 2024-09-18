@@ -1,0 +1,32 @@
+/* Importação da fonte Roboto (Google Fonts)  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');  
+
+/*  Reset de estilos para garantir uniformidade entre navegadores */ 
+* {  
+   margin: 0;
+   padding: 0; 
+   box-sizing: border-box;  
+} 
+
+/* Paleta de Cores  */  
+:root {
+  --cor-fundo: #DAE0E6; 
+  --cor-texto-principal: #033603;  
+  --cor-destaque: #FFC107;  
+  --cor-secundaria: #293845;
+  --cor-detalhe: #006400;
+}
+
+body {  
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--cor-fundo); 
+  color: var(--cor-texto-principal); 
+  line-height: 1.6;  
+} 
+
+/* Container Principal  */
+.container {  
+  max-width: 1200px;
+  margin: 0 auto; 
+  padding: 20px; 
+}

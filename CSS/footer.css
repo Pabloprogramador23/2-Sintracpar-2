@@ -1,0 +1,58 @@
+/*  ======================  Rodapé  ======================  */  
+
+footer {  
+    font-size: 14px;  
+ }
+ 
+ .footer-superior {  
+    background-color: var(--cor-detalhe); 
+    padding: 20px 0;  
+    color: white;
+ }
+ 
+ .footer-inferior {
+    background-color: var(--cor-destaque);
+    padding: 10px 0; 
+    color: var(--cor-detalhe);  
+ }  
+ 
+ .footer-conteudo { 
+    display: flex;  
+    align-items: center; 
+    justify-content: space-between;
+ }
+ 
+ .footer-logos-contato {
+  display: flex; 
+  align-items: center; /* Alinha verticalmente ao centro  */ 
+ } 
+ 
+ .footer-logos { 
+    margin-right: 30px;  /*  Espaçamento entre a logo e o texto */ 
+    text-align: left;
+ }
+ 
+ .footer-logos img { 
+    max-width: 100px; 
+    height: auto; 
+ }
+ 
+ .footer-contato {  
+    text-align: left;  
+ }
+ 
+ .footer-contato p {  
+    margin-bottom: 5px; 
+ }
+ 
+ .social-icons-footer a { 
+  display: inline-block;  
+  margin: 0 10px; 
+  font-size: 1.4em;
+  color: white; 
+  transition: color 0.3s ease; 
+ } 
+ 
+ .social-icons-footer a:hover {
+    color: var(--cor-destaque);
+ } 

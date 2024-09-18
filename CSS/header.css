@@ -1,0 +1,46 @@
+/* Header  */ 
+header {  
+   background-color: var(--cor-destaque);  
+   color: var(--cor-secundaria);  
+   padding: 20px 0;  
+   text-align: center;  
+  }  
+  
+  .header-content { 
+   display: flex;
+   flex-direction: column;   /*  Organiza os elementos na vertical */  
+   align-items: center;   
+  } 
+  
+  .social-icons { 
+   display: flex; 
+   gap: 10px;
+   margin-bottom: 10px; /* Adiciona espaço entre os ícones e o logo */  
+  }
+  
+/* Logo */ 
+.logo-area { 
+   text-align: left; /*  Alinhamento da logo à esquerda */
+}
+
+.logo {  
+   max-width: 200px;  /* Ajuste conforme necessário */  
+   height: auto; 
+}
+
+/*  Título e Subtítulo */
+.titulo-header {  
+   text-align: center; /*  Centraliza o título e o subtítulo  */ 
+} 
+.titulo-header h1 {
+ font-size: 2em;
+}
+
+.titulo-header h2 { 
+ font-size: 1em;
+} 
+
+/* Ícones de Redes Sociais e Botão de Login  */ 
+.header-acoes {  
+   text-align: right;  /*  Alinha os botões à direita  */ 
+}

@@ -654,6 +654,7 @@ footer {
 .footer-logos img { 
   max-width: 100px;   /* Define o tamanho máximo da logo */
   height: auto;    /*  Mantém a proporção da imagem  */
+
 }  
 
 /* ===  Informações de Contato  === */  
