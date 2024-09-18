@@ -1,0 +1,801 @@
+/* Importação da fonte Roboto (Google Fonts) */ 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');  
+ 
+/* Reset de estilos para garantir uniformidade entre navegadores */ 
+* {  
+  margin: auto; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
+ /* Paleta de Cores - Sintonia Vibrante  */ 
+:root {  
+   --cor-fundo:  #DAE0E6;  
+   --cor-texto-principal:  #033603; 
+   --cor-destaque:  #FFC107; 
+   --cor-secundaria:  #293845;  
+   --cor-detalhe:  #006400; 
+ }
+
+body {
+  font-family: 'Roboto', sans-serif; 
+  background-color: var(--cor-fundo);  
+  color: var(--cor-texto-principal); 
+  line-height: 1.6;
+} 
+
+ /*  Container principal  - controla a largura máxima do conteúdo */  
+ .container { 
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 20px;
+ }
+
+ /* Header  */ 
+ header { 
+  background-color: var(--cor-destaque); 
+  color: var(--cor-secundaria);  
+  padding: 20px 0;
+  text-align: center; 
+}
+
+.header-content {  
+   display: flex; 
+   flex-direction: column;  /* Logo e texto na vertical */ 
+   align-items: center; 
+ } 
+
+ .logo {  
+    display: block;
+    margin: 0 auto 20px auto;  
+    max-width: 300px;
+ }
+
+h1, 
+h2 { 
+  margin: 0;  /*  Removendo margem padrão */  
+}
+
+ /*  Estilos do Menu  (Nav)  */ 
+ nav {  
+   background-color: transparent;
+ }
+
+nav ul {
+    list-style: none;
+    display: flex;  
+    justify-content: center;
+}
+
+nav li {  
+    margin-right: 40px;
+    position: relative; 
+}
+
+ nav a { 
+    text-decoration: none;
+    color: var(--cor-secundaria); 
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+ nav a:hover {
+    background-color: var(--cor-destaque); 
+    color: var(--cor-secundaria);
+}  
+
+ .seta {  
+    font-size: 14px;
+}  
+ 
+/*  Submenu  (Dropdown) */ 
+.submenu {  
+  display: none;  
+   position: absolute; 
+   top: 100%; 
+   left: 0;  
+   background-color: var(--cor-fundo);
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  
+   z-index: 1000;  
+ }  
+
+.submenu li {
+   margin: 0;
+   padding: 10px 20px;
+}
+
+.submenu li:hover {
+    background-color: var(--cor-destaque);  /* Destaque suave ao passar o mouse  */  
+}  
+
+nav li:hover .submenu {  
+   display: block;  
+} 
+
+/* ================  Seção de Destaque  (Carrossel)  ===================== */
+.destaque { 
+   position: relative;
+   overflow: hidden; 
+}  
+ 
+.carrossel {  
+   display: flex;  
+   transition: transform 0.5s ease-in-out; 
+}
+
+.carrossel img {  
+   width: 100%;
+   height: 400px;  
+   object-fit: cover;
+} 
+
+/* Navegação do Carrossel  (botões) */
+.seta-carrossel {  
+   position: absolute;  
+   top: 50%;
+   transform: translateY(-50%); 
+   background-color: rgba(0,  0, 0,  0.3);
+   color: #fff; 
+   padding: 10px 15px;  
+   border: none; 
+   cursor: pointer;  
+}
+
+.seta-carrossel:hover {
+    background-color: rgba(0,  0,  0, 0.5);  
+} 
+  
+.seta-esquerda {  
+    left: 20px; 
+}
+
+.seta-direita { 
+    right: 20px;  
+} 
+
+/*  ======================== Demais Seções ============================ */ 
+.sobre,
+.beneficios,  
+.noticias {
+  padding: 40px 0;  
+   text-align: center;  
+} 
+
+.sobre h2,
+.beneficios h2,  
+.noticias h2  {
+   color: var(--cor-texto-principal);
+    margin-bottom: 20px; 
+    font-size: 2.5em;  
+}
+
+.sobre p {  
+  color: var(--cor-secundaria);  
+   font-size: 1.2em;
+   line-height: 1.6; 
+}
+
+/* ===================== Cards de Benefícios - Novo Estilo ===================  */  
+.lista-beneficios {  
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaçamento entre os cards na vertical  */  
+ }
+
+ .beneficio {  
+    background-color: #fff; 
+    padding: 30px 20px; 
+    border-radius: 30px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0,  0.1);
+    text-align: center; 
+    color: white;  
+    transition: transform 0.3s ease;
+   /* height: 100px;   Define uma altura fixa para os cards */
+    display: flex;  
+    flex-direction: column;  
+    align-items: center; 
+}
+ 
+ .beneficio:hover {
+    transform: scale(1.05);  
+ }  
+
+ .icon { 
+    font-size: 3em;
+    margin-bottom: 15px;
+    display: flex;
+ }
+ 
+ .beneficio h3 { 
+     font-size: 1.5em;
+     margin-bottom: 10px;  
+}  
+ 
+.beneficio p { 
+     font-size: 1em;  
+    line-height: 1.5;  
+}
+
+/* =================  Cards de Notícias  =================== */ 
+.lista-noticias {
+   display: grid;
+   grid-template-columns: repeat(auto-fit,  minmax(300px,  1fr));  
+   grid-gap: 30px;  
+}
+
+.noticia {
+   background-color: white;
+   border-radius: 8px;
+    overflow: hidden; 
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   transition: transform 0.3s ease;  
+}
+
+.noticia:hover {  
+    transform: translateY(-8px);  
+ }  
+ 
+ .noticia img {
+    width: 100%; 
+    height: 200px;
+    object-fit: cover;  
+ } 
+ 
+ .noticia .conteudo {  
+    padding: 20px;  
+}
+
+.noticia h3 { 
+    color: var(--cor-texto-principal);  
+    margin-bottom: 10px;
+    font-size: 1.5em;  
+    font-weight: bold; 
+}  
+
+.noticia p { 
+   color: var(--cor-secundaria); 
+    line-height: 1.5;
+   margin-bottom: 15px;
+ }
+
+.noticia .ler-mais {
+    display: inline-block; 
+    padding: 10px 20px;
+   background-color: var(--cor-destaque);
+   color: var(--cor-secundaria);  
+    text-decoration: none;  
+    border-radius: 4px;
+   transition: background-color 0.3s ease; 
+}
+  
+.noticia .ler-mais:hover {  
+   background-color: var(--cor-detalhe);  
+    color: white;
+} 
+
+/*  =========================  Toques Artísticos =========================== */
+
+ /*  Ícones (Font Awesome)  */  
+.beneficios i, 
+ .noticias i, 
+ .contato i  { 
+     font-size: 2em; 
+    margin-bottom: 10px; 
+    color: var(--cor-detalhe); 
+ }
+ 
+/*  ===================== Paginação  (Opcional) ======================  */ 
+.paginacao {  
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;  
+ } 
+
+ .paginacao .btn-pagina {
+     background-color: #f2f2f2;
+    color: var(--cor-secundaria); 
+    border: none;
+    padding: 8px 12px;  
+    margin: 0 5px;  
+    border-radius: 4px;
+    cursor: pointer;  
+    transition: background-color 0.3s ease; 
+ }
+
+ .paginacao .btn-pagina:hover {
+   background-color: var(--cor-destaque);
+    color: white;  
+} 
+  
+.paginacao .btn-pagina.ativo { /* Botão da página atual  */ 
+  background-color: var(--cor-destaque);
+    color: white;
+}
+
+/* ===============  Seção ""Sobre" do Sindicato"  ================  */ 
+ /*  =================  Seção  "Sobre o Sindicato" - Estilo Card  ================= */
+
+.sobre { 
+   background-color: var(--cor-fundo); 
+  padding: 40px 0;  
+ }  
+ 
+ .card-sobre { 
+   background-color: var(--cor-secundaria); 
+  /* Azul escuro para o card */  
+ color: white; /* Texto branco  */  
+  border-radius: 8px; 
+   display: flex;  
+  /*  Usando flexbox para o layout do card  */  
+ box-shadow: 0px 4px 6px rgba(0,  0, 0,  0.1);  
+ /*  Sombra sutil */
+} 
+ 
+ .conteudo-sobre {  
+  flex: 1;
+ /*  A "conteudo-sobre" ocupará o espaço disponível  */  
+  padding: 50px; 
+  text-align: left;
+ /*  Alinha o texto à esquerda */  
+}
+  
+.conteudo-sobre h2 {
+   color: #FFC107; 
+  /* Título em amarelo vibrante */ 
+   margin-bottom: 20px;
+} 
+
+ .conteudo-sobre p {  
+   font-size: 1em;
+    line-height: 1.6;
+    color: #FFC107;
+} 
+  
+ .imagem-sobre {
+    width: 300px;
+ /*  Largura da imagem  */ 
+    background-color: var(--cor-detalhe); /* Cor de fundo para a imagem */ 
+  /*  Você poderá usar background-image para inserir a imagem  */ 
+}
+/*  ======================== Seção de Contato  ========================  */  
+
+.contato { 
+  padding: 40px 0; 
+  background-color: var(--cor-fundo); 
+} 
+  
+.contato-conteudo {
+    display: flex;  
+    justify-content: space-between;
+   align-items: center; 
+}
+  
+.contato-info {  
+    width: 48%;
+    color: var(--cor-texto-principal); 
+   text-align: left;
+ }
+
+/*  ================  Formulário de Contato  ================== */ 
+ .contato-info form {
+   margin-top: 20px;
+ } 
+
+.form-group {
+    margin-bottom: 15px;  
+}
+  
+.form-group label {
+    display: block;
+   margin-bottom: 5px;
+   color: var(--cor-secundaria);
+    /*  Azul escuro  */ 
+}
+
+.form-group input,
+.form-group textarea { 
+    width: 100%;
+   padding: 10px;  
+    border: 1px solid #ddd; 
+   border-radius: 4px;  
+ }
+
+.contato-info button[type="submit"] {  
+    padding: 10px 20px; 
+    background-color: var(--cor-destaque);  
+    color: var(--cor-secundaria);  
+   border: none; 
+    border-radius: 4px;
+   cursor: pointer; 
+    transition: background-color 0.3s ease;  
+}  
+
+ .contato-info button[type="submit"]:hover {  
+   background-color: var(--cor-detalhe);
+   color: white; 
+}  
+ 
+ .contato-info .info-contato {  
+  margin-top: 30px;  
+}  
+ 
+ /*  ================  =====================  ==================  */
+
+ .contato-info h2 {  
+    color: var(--cor-secundaria);  
+   margin-bottom: 20px;  
+ }
+  
+ .contato-info h3 {  
+    color: var(--cor-secundaria);
+   margin-bottom: 10px;
+}  
+
+.contato-info p {  
+    margin-bottom: 10px; 
+}  
+
+.contato-info a {
+   /* Estilo para o link do email */  
+   color: var(--cor-secundaria); 
+   text-decoration: none;
+   font-weight: bold;
+   transition: color 0.3s ease;  
+} 
+
+.contato-info a:hover {
+   color: var(--cor-destaque);  
+}
+
+.contato-info .social-icons {  
+    margin-top: 20px; 
+ }
+  
+.contato-info .social-icons a {  
+   display: inline-block;
+   margin-right: 15px;
+    font-size: 1.5em; 
+   color: var(--cor-secundaria); 
+   transition: color 0.3s ease; 
+}  
+
+ .contato-info .social-icons a:hover {
+  color: var(--cor-destaque);
+ }
+  
+ .contato-mapa { 
+   width: 48%;
+}
+
+ .contato-mapa iframe {  
+   width: 100%;  
+   border: none; 
+    border-radius: 8px;
+} 
+
+ /* === Botão de Login === */
+
+.btn-login { 
+   display: inline-block; 
+   padding: 12px 24px;
+   background-color: var(--cor-secundaria);  
+   color: var(--cor-detalhe); 
+   text-decoration: none;  
+   border-radius: 4px;  
+   transition: background-color 0.3s ease; 
+}
+
+.btn-login:hover {
+    background-color: var(--cor-secundaria); 
+   color: rgb(19, 233,  169);
+ } 
+
+ .login {
+    padding: 60px 0; 
+    background-color: var(--cor-fundo); 
+   text-align: center;  
+ }  
+ 
+ .login h2 {  
+ color: var(--cor-texto-principal); 
+   margin-bottom: 20px;
+ }
+
+.login p { 
+   color: var(--cor-secundaria);  
+   margin-bottom: 30px; 
+}
+
+.login form { 
+  max-width: 400px; 
+   margin: 0 auto;
+   background-color: white;  
+  padding: 30px;
+  border-radius: 8px;
+   box-shadow: 0px 2px 4px rgba(0,  0, 0, 0.1);
+ } 
+
+.login .form-group {  
+   margin-bottom: 15px; 
+ } 
+  
+ .login label { 
+   display: block; 
+   text-align: left;
+    margin-bottom: 5px; 
+   color: var(--cor-secundaria); 
+} 
+
+.login input[type="text"], 
+.login input[type="password"] {
+   width: 100%;
+   padding: 10px;  
+   border: 1px solid #ddd;  
+   border-radius: 4px; 
+}
+ 
+ .login button[type="submit"] {  
+   width: 100%; 
+  padding: 12px;
+  background-color: var(--cor-destaque);  
+  color: var(--cor-secundaria);
+   border: none;
+    border-radius: 4px; 
+   cursor: pointer;  
+    transition: background-color 0.3s ease;  
+ }
+
+ .login button[type="submit"]:hover {
+    background-color: var(--cor-detalhe); 
+   color: white; 
+ }
+
+/*  ====================== Seção "Documentos e Legislação" - Página Dedicada ======================  */ 
+
+.documentos-section {
+  padding: 40px 0;
+  background-color: var(--cor-fundo);  
+  text-align: center;
+}
+
+.documentos-section h2 {
+  color: var(--cor-texto-principal);  
+  font-size: 2.5em; 
+  margin-bottom: 30px;
+} 
+
+.lista-documentos {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    grid-gap: 20px;  
+} 
+
+.documento { 
+    background-color: white;  
+    padding: 30px; 
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  
+    transition: transform 0.3s ease; 
+}
+
+.documento:hover { 
+  transform: translateY(-5px);  
+}  
+
+.documento i {
+    font-size: 3em; 
+    color: var(--cor-detalhe);   
+    margin-bottom: 15px;
+}  
+
+.documento h3 {  
+    color: var(--cor-secundaria); 
+    margin-bottom: 10px; 
+}
+
+.documento a {   
+    display: inline-block;  
+    padding: 10px 20px; 
+    background-color: var(--cor-destaque);
+    color: var(--cor-secundaria);  
+    text-decoration: none; 
+    border-radius: 4px; 
+    transition: background-color 0.3s ease;  
+} 
+
+.documento a:hover {
+    background-color: var(--cor-detalhe);
+    color: white;  
+}
+
+/*  ====================  Página de Notícias  ===================== */
+
+.noticias-section {  
+  padding: 40px 0;
+  background-color: var(--cor-fundo);  
+  text-align: center;
+ }
+ 
+ .noticias-section h2 { 
+    color: var(--cor-texto-principal);   
+    font-size: 2.5em;
+    margin-bottom: 30px;  
+ } 
+ 
+ /*  Layout da Grade de Notícias  */ 
+ .lista-noticias {  
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr);  /* Responsivo!  */
+  grid-gap: 20px;
+ }
+ 
+ /*  Estilo dos Cards de Notícias  */  
+ .noticia {
+    width: 400px;
+    height: 500px;
+    background-color: white;  
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;  /*  Organiza os elementos em uma coluna  */  
+ }
+ 
+ 
+ .noticia:hover {  
+    transform: translateY(-5px);
+ }
+ 
+ .noticia img {  
+  width: 100%; 
+  height: 200px;
+  object-fit:cover; 
+ } 
+ 
+ .noticia .conteudo {  
+  padding: 20px; 
+  flex: grow 1
+   }
+ 
+ .noticia h3 { 
+  color: var(--cor-texto-principal); 
+  font-size: 1.6em;  
+  margin: auto;
+ }  
+ 
+ .noticia p { 
+    color: var(--cor-secundaria); 
+    line-height: 1.5; 
+     margin: auto;
+ } 
+ 
+ .noticia .data {
+  color: #777;  
+  font-size: 0.9em;  
+  margin-bottom: 15px; 
+ }
+ 
+ .noticia .ler-mais { 
+    display: block;
+    padding: 8px 16px; 
+    background-color: var(--cor-destaque);
+    color: var(--cor-secundaria);
+    text-decoration: none;  
+    border-radius: 4px;  
+    transition: background-color 0.3s ease;
+    margin: 10px;  
+ }
+ 
+ .noticia .ler-mais:hover {
+    background-color: var(--cor-detalhe);  
+    color: white;
+ }
+ 
+ /*  ===================== Paginação (Opcional)  ======================  */ 
+ .paginacao { 
+    margin-top: 30px;  
+    display: flex;  
+    justify-content: center;  
+ } 
+ 
+ .paginacao .btn-pagina {
+    background-color: #f2f2f2;
+    color: var(--cor-secundaria);  
+    border: none; 
+    padding: 8px 12px; 
+    margin: 0 5px;  
+    border-radius: 4px;  
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+ }  
+ 
+ .paginacao .btn-pagina:hover {  
+    background-color: var(--cor-destaque);  
+    color: white;
+ } 
+ 
+ .paginacao .btn-pagina.ativo { /*  Botão da página atual  */ 
+  background-color: var(--cor-destaque);  
+  color: white; 
+ }
+
+ /* ===============  Rodapé - Organização e Detalhes! ===============  */
+
+footer { 
+  font-size: 14px;
+}
+
+.footer-superior {  
+  background-color: var(--cor-detalhe);  /* Verde */ 
+  padding: 20px 0;
+  color: white;
+} 
+
+.footer-inferior { 
+  background-color: var(--cor-destaque);  /* Amarelo */  
+  padding: 10px 0;  
+  color: var(--cor-detalhe);   /* Verde  */ 
+} 
+
+.footer-conteudo { 
+  display: flex;
+  align-items: center;  
+  justify-content: space-between;   /*  Distribui os elementos com espaço entre eles  */
+}
+
+/* === Logos e Contato na Mesma Linha ===  */
+.footer-logos-contato {  /* Novo container para logos e contato  */  
+    display: flex;
+    align-items: center; /*  Alinha verticalmente ao centro */  
+} 
+
+.footer-logos {  
+    margin-right: 30px; /* Espaçamento entre a logo e o texto */  
+    text-align: left;  /* Alinha o conteúdo à esquerda */
+} 
+
+.footer-logos img {
+    max-width: 100px; 
+    height: auto;  
+}
+
+.footer-contato {
+    text-align: left;  
+} 
+
+.footer-contato p {
+    margin-bottom: 5px;  
+}  
+
+/* ===  Redes Sociais  === */ 
+.social-icons-footer a {
+  display: inline-block; 
+  margin: 0 10px; 
+  font-size: 1.4em;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.social-icons-footer a:hover {
+  color: var(--cor-destaque); 
+} 
+
+/* ============  Ícone Flutuante do WhatsApp  ============ */ 
+.whatsapp-icon {
+  position: fixed;  
+  bottom: 20px;   
+  right: 20px;   
+  background-color: #25d366;   /*  Verde do WhatsApp */ 
+  color: white;
+  padding: 15px;
+  border-radius: 50%;    /*  Círculo Perfeito! */  
+  font-size: 2em; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);  
+  z-index: 1000;  
+  transition: background-color 0.3s ease; 
+}  
+
+.whatsapp-icon:hover { 
+  background-color: #128C7E;  
+}
