@@ -754,82 +754,87 @@ nav li:hover .submenu {
   color: white; 
  }
 
- /* ===============  Rodapé - Organização e Detalhes! ===============  */
+/*  ... (Outros Estilos)  ...  */
 
-footer { 
-  font-size: 14px;
+  /* ... (Outros Estilos)  ...  */
+
+ /* ... (Outros Estilos)  ...  */
+
+ /* ===============  Rodapé - Alinhamento Perfeito!  ===============  */  
+
+ footer {  
+   font-size: 14px;  
 }
 
-.footer-superior {  
-  background-color: var(--cor-detalhe);  /* Verde */ 
-  padding: 20px 0;
-  color: white;
-} 
+/*  ===  Flexbox na  div  Superior! === */ 
+.footer-superior {
+ background-color: var(--cor-detalhe);  
+ padding: 20px  0; 
+ color: white;
+ display: flex; /* Ativando o Flexbox */
+ align-items: center;  /*  Alinhamento vertical */
+ justify-content: space-between; /* Distribuição do espaço */ 
+}
 
 .footer-inferior { 
-  background-color: var(--cor-destaque);  /* Amarelo */  
-  padding: 10px 0;  
-  color: var(--cor-detalhe);   /* Verde  */ 
-} 
+ background-color: var(--cor-destaque);
+ padding: 10px  0;  
+ color: var(--cor-detalhe);
+}  
 
-.footer-conteudo { 
-  display: flex;
-  align-items: center;  
-  justify-content: space-between;   /*  Distribui os elementos com espaço entre eles  */
+/*  ===  Logos e Contato Lado a Lado === */
+.footer-logos-contato {  
+   display: flex;  
+   align-items: center; 
+   flex-wrap: wrap;  /*  Permite que os elementos quebrem para a próxima linha,  se necessário */ 
+}
+  
+.footer-logos {
+   margin-right: 30px;   
+   text-align: left;  
 }
 
-/* === Logos e Contato na Mesma Linha ===  */
-.footer-logos-contato {  /* Novo container para logos e contato  */  
-    display: flex;
-    align-items: center; /*  Alinha verticalmente ao centro */  
-} 
-
-.footer-logos {  
-    margin-right: 30px; /* Espaçamento entre a logo e o texto */  
-    text-align: left;  /* Alinha o conteúdo à esquerda */
-} 
-
-.footer-logos img {
-    max-width: 100px; 
-    height: auto;  
+.footer-logos img { 
+   max-width: 100px; 
+   height: auto; 
 }
 
 .footer-contato {
-    text-align: left;  
-} 
-
-.footer-contato p {
-    margin-bottom: 5px;  
-}  
-
-/* ===  Redes Sociais  === */ 
-.social-icons-footer a {
-  display: inline-block; 
-  margin: 0 10px; 
-  font-size: 1.4em;
-  color: white;
-  transition: color 0.3s ease;
+   text-align: left; 
 }
 
-.social-icons-footer a:hover {
-  color: var(--cor-destaque); 
-} 
+.footer-contato p {
+ margin-bottom: 5px;
+}
 
-/* ============  Ícone Flutuante do WhatsApp  ============ */ 
-.whatsapp-icon {
-  position: fixed;  
-  bottom: 20px;   
-  right: 20px;   
-  background-color: #25d366;   /*  Verde do WhatsApp */ 
-  color: white;
-  padding: 15px;
-  border-radius: 50%;    /*  Círculo Perfeito! */  
-  font-size: 2em; 
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);  
-  z-index: 1000;  
-  transition: background-color 0.3s ease; 
+/* === Redes Sociais ===  */ 
+.social-icons-footer a {
+   display: inline-block; 
+  margin: 0 10px;  
+  font-size: 1.4em; 
+   color: white;
+  transition: color 0.3s ease; 
+}
+
+.social-icons-footer a:hover { 
+  color: var(--cor-destaque);  
 }  
 
-.whatsapp-icon:hover { 
-  background-color: #128C7E;  
+/* ===============  Ícone Flutuante do WhatsApp =============== */
+.whatsapp-icon {  
+  position: fixed; 
+ bottom: 20px; 
+  right: 20px;
+   background-color: #25d366; 
+  color: white;
+ padding: 15px; 
+ border-radius: 50%;  /*  Círculo Perfeito */ 
+ font-size: 2em;
+  box-shadow: 0  2px 5px rgba(0,  0,  0,  0.3);
+  z-index: 1000;
+ transition: background-color 0.3s ease; 
+}
+
+.whatsapp-icon:hover {  
+ background-color: #128C7E; 
 }
