@@ -132,3 +132,11 @@ const setaDireita = document.querySelector('.seta-direita');
  // Adiciona um evento de "submit" ao formulário  
  const formulario = document.getElementById('contatoForm'); 
 formulario.addEventListener('submit',  enviarFormulario);
+
+//  Menu Hambúrguer
+const btnHamburguer = document.querySelector('.btn-hamburguer');  
+ const menu = document.querySelector('nav ul');  //  Seleciona diretamente a  ul  do menu  
+
+ btnHamburguer.addEventListener('click',  () =>  {
+ menu.classList.toggle('aberto');  // Alterna a classe  "aberto" na  ul  do menu 
+});
