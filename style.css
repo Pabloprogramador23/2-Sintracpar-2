@@ -715,7 +715,6 @@ nav {
  /*  Estilo dos Cards de Notícias  */  
  .noticia {
     width: 400px;
-    height: 500px;
     background-color: white;  
     border-radius: 5px;
     overflow: hidden;
@@ -730,22 +729,27 @@ nav {
     transform: translateY(-5px);
  }
  
- .noticia img {  
-  width: 100%; 
-  height: 200px;
-  object-fit:cover; 
- } 
+ .noticia img {
+   width: 100%;
+   height: 200px; /* Define altura fixa para a imagem */
+   object-fit: cover;
+}
  
- .noticia .conteudo {  
-  padding: 20px; 
-  flex:auto
-   }
+.noticia .conteudo {
+   padding: 20px;
+   flex-grow: 1;  /* Permite que o conteúdo se expanda e ocupe o espaço restante */
+}
  
  .noticia h3 { 
   color: var(--cor-texto-principal); 
   font-size: 1.6em;  
   margin: auto;
   object-fit: cover;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limita a 2 linhas */
+  -webkit-box-orient: vertical;
  }  
  
  .noticia p { 
@@ -796,7 +800,7 @@ nav {
    
    .noticia img {
      width: 100%; /* Ocupa toda a largura da tela */
-     height: 150px; /* Altura fixa para imagens */
+    
      object-fit: cover; /* Mantém a proporção da imagem */
    }
  
@@ -815,7 +819,7 @@ nav {
       }   
       .noticia {
         width: 100%; /* Ocupa toda a largura da tela */
-        height: auto; /* Altura automática */
+       
         margin-bottom: 20px; /* Adiciona um espaço entre as notícias */
       }
       
