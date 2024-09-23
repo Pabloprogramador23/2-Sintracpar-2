@@ -284,8 +284,10 @@ nav {
 /* =================  Cards de Notícias  =================== */ 
 .lista-noticias {
    display: grid;
-   grid-template-columns: repeat(auto-fit,  minmax(300px,  1fr));  
+   grid-template-columns: repeat(3,  1fr);  
    grid-gap: 30px;  
+   display: flex; /* Add this */
+   justify-content: center; /* Add this */
 }
 
 .noticia {
@@ -376,6 +378,20 @@ nav {
   background-color: var(--cor-destaque);
     color: white;
 }
+
+/* =================  Media Queries - Responsividade!  ===================  */ 
+@media  (max-width: 992px) { 
+   .lista-noticias { 
+       grid-template-columns: repeat(2,  1fr); /* 2 colunas em telas médias  */  
+    } 
+ }
+ 
+ @media  (max-width: 768px)  { 
+   .lista-noticias { 
+       grid-template-columns: 1fr; /* 1 coluna em telas pequenas */  
+    }
+ }
+ 
 
 /* ===============  Seção ""Sobre" do Sindicato"  ================  */ 
  /*  =================  Seção  "Sobre o Sindicato" - Estilo Card  ================= */
@@ -679,6 +695,8 @@ nav {
   padding: 40px 0;
   background-color: var(--cor-fundo);  
   text-align: center;
+  display: flex; /* Add this */
+  justify-content: center; /* Add this */
  }
  
  .noticias-section h2 { 
@@ -720,13 +738,14 @@ nav {
  
  .noticia .conteudo {  
   padding: 20px; 
-  flex: grow 1
+  flex:auto
    }
  
  .noticia h3 { 
   color: var(--cor-texto-principal); 
   font-size: 1.6em;  
   margin: auto;
+  object-fit: cover;
  }  
  
  .noticia p { 
@@ -756,6 +775,57 @@ nav {
     background-color: var(--cor-detalhe);  
     color: white;
  }
+
+ @media (max-width: 768px) {
+   .lista-noticias {
+      grid-template-columns: 1fr;
+  }
+}
+   .noticia-section {
+   display: grid; 
+   grid-template-columns: repeat(1, 1fr);
+     flex-direction: column; /* Altera o layout para uma coluna */
+     display: flex; /* Add this */
+     justify-content: center; /* Add this */
+   }   
+   .noticia {
+     width: 100%; /* Ocupa toda a largura da tela */
+     height: auto; /* Altura automática */
+     margin-bottom: 20px; /* Adiciona um espaço entre as notícias */
+   }
+   
+   .noticia img {
+     width: 100%; /* Ocupa toda a largura da tela */
+     height: 150px; /* Altura fixa para imagens */
+     object-fit: cover; /* Mantém a proporção da imagem */
+   }
+ 
+
+   @media (max-width: 962px) {
+      .lista-noticias {
+         grid-template-columns: 1fr;
+     }
+   }  
+      .noticia-section {
+      display: grid; 
+      grid-template-columns: repeat(1, 1fr);
+        flex-direction: column; /* Altera o layout para uma coluna */
+        display: flex; /* Add this */
+        justify-content: center; /* Add this */
+      }   
+      .noticia {
+        width: 100%; /* Ocupa toda a largura da tela */
+        height: auto; /* Altura automática */
+        margin-bottom: 20px; /* Adiciona um espaço entre as notícias */
+      }
+      
+      .noticia img {
+        width: 100%; /* Ocupa toda a largura da tela */
+        height: 150px; /* Altura fixa para imagens */
+        object-fit: cover; /* Mantém a proporção da imagem */
+      }
+    
+
  
  /*  ===================== Paginação (Opcional)  ======================  */ 
  .paginacao { 
@@ -787,9 +857,7 @@ nav {
 
 /*  ... (Outros Estilos)  ...  */
 
-  /* ... (Outros Estilos)  ...  */
 
- /* ... (Outros Estilos)  ...  */
 
  /* ===============  Rodapé - Alinhamento Perfeito!  ===============  */  
 
