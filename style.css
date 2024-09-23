@@ -809,7 +809,7 @@ nav {
       .lista-noticias {
          grid-template-columns: 1fr;
      }
-   }  
+   }
       .noticia-section {
       display: grid; 
       grid-template-columns: repeat(1, 1fr);
@@ -819,17 +819,15 @@ nav {
       }   
       .noticia {
         width: 100%; /* Ocupa toda a largura da tela */
-       
+        height: auto; /* Altura automática */
         margin-bottom: 20px; /* Adiciona um espaço entre as notícias */
       }
       
       .noticia img {
         width: 100%; /* Ocupa toda a largura da tela */
-        height: 150px; /* Altura fixa para imagens */
+       
         object-fit: cover; /* Mantém a proporção da imagem */
       }
-    
-
  
  /*  ===================== Paginação (Opcional)  ======================  */ 
  .paginacao { 
@@ -930,13 +928,20 @@ nav {
   right: 20px;
    background-color: #25d366; 
   color: white;
- padding: 15px; 
+  padding: 15px; /* Aumenta o tamanho do círculo */
+  line-height: 40px; /* Centraliza verticalmente o ícone */
+  
+
  border-radius: 50%;  /*  Círculo Perfeito */ 
- font-size: 2em;
-  box-shadow: 0  2px 5px rgba(0,  0,  0,  0.3);
+ font-size: 2.5em; /* Aumenta o tamanho do ícone */
+ box-shadow: 0  2px 5px rgba(0,  0,  0,  0.3);
   z-index: 1000;
  transition: background-color 0.3s ease; 
+ width: 70px; /* Defina a largura e altura como iguais */
+  height: 70px;
+  border-radius: 50%; /* Agora, o ícone será um círculo perfeito */
 }
+
 
 .whatsapp-icon:hover {  
  background-color: #128C7E; 
