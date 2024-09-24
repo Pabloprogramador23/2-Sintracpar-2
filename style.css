@@ -184,16 +184,7 @@ nav {
     right: 20px;  
 } 
 
-/*  ======================== Demais Seções ============================ */ 
-.sobre,
-.beneficios,  
-.noticias {
-  padding: 40px 0;  
-   text-align: center;  
-} 
 
-.sobre h2,
-.beneficios h2,  
 .noticias h2  {
    color: var(--cor-texto-principal);
     margin-bottom: 20px; 
@@ -268,7 +259,7 @@ nav {
    color: white;  
 } 
  
-/* =================  Media Queries - Responsividade!  ===================  */ 
+/* =================  Media Queries - Responsivos - Responsividade!  ===================  */ 
 @media  (max-width: 992px) { 
   .lista-beneficios { 
       grid-template-columns: repeat(2,  1fr); /* 2 colunas em telas médias  */  
