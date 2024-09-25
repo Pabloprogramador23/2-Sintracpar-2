@@ -140,3 +140,50 @@ const btnHamburguer = document.querySelector('.btn-hamburguer');
  btnHamburguer.addEventListener('click',  () =>  {
  menu.classList.toggle('aberto');  // Alterna a classe  "aberto" na  ul  do menu 
 });
+// Função para lidar com o envio da denúncia
+function enviarDenuncia(event) {
+  event.preventDefault();
+
+  // Coletar os dados da denúncia
+  const tipoDenuncia = document.getElementById('tipoDenuncia').value;
+  const descricao = document.getElementById('descricao').value;
+  const nomeDenunciante = document.getElementById('nomeDenunciante').value;
+  const emailDenunciante = document.getElementById('emailDenunciante').value;
+
+  console.log("Tipo de Denúncia:", tipoDenuncia);
+  console.log("Descrição:", descricao);
+  console.log("Nome do Denunciante:", nomeDenunciante);
+  console.log("Email do Denunciante:", emailDenunciante);
+
+  //  Enviar os dados para o servidor (backend) -  Usando AJAX! 
+  const xhr = new XMLHttpRequest(); 
+  xhr.open('POST', 'http://localhost:8080/api/denuncias', true); //  Substitua pela URL real do seu endpoint
+
+  xhr.setRequestHeader('Content-Type', 'application/json'); 
+
+  xhr.onload = function () {
+    if (this.status >= 200 && this.status < 300) {
+        //  Sucesso ao enviar a denúncia
+        console.log("Denúncia enviada com sucesso!");
+        alert("Sua denúncia foi enviada com sucesso. Agradecemos o seu contato!");
+        document.getElementById('denunciaForm').reset(); 
+    } else {
+        //  Erro ao enviar a denúncia 
+        console.error("Erro ao enviar denúncia. Código de status:", this.status);
+        alert("Ocorreu um erro ao enviar a denúncia. Por favor, tente novamente mais tarde."); 
+    }
+  };
+
+  xhr.onerror = function () {
+    console.error("Erro na requisição AJAX para enviar denúncia.");
+    alert("Ocorreu um erro ao enviar a denúncia. Por favor, tente novamente mais tarde."); 
+  };
+
+  const data = JSON.stringify({
+      tipo: tipoDenuncia,
+      descricao: descricao,
+      nome: nomeDenunciante,
+      email: emailDenunciante 
+  });
+  xhr.send(data);  
+}
